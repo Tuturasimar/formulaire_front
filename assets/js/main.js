@@ -15,7 +15,10 @@ $.addEventListener("DOMContentLoaded", () => {
     };
     console.log(data);
 
-    const response = await axios.post("https://260652ce1274.ngrok.io", data);
+    const response = await axios.post(
+      "https://formulaire-exercice.herokuapp.com/",
+      data
+    );
     if (response.status === 200) {
       alert("Un mail vous a été envoyé");
     } else {
