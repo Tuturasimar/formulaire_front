@@ -5,6 +5,7 @@ $.addEventListener("DOMContentLoaded", () => {
 
   $.querySelector("#contact-form").addEventListener("submit", async (event) => {
     event.preventDefault();
+    $.querySelector("button").setAttribute("disabled", "disabled");
 
     const data = {
       firstname: $.querySelector("#firstname").value,
@@ -21,8 +22,10 @@ $.addEventListener("DOMContentLoaded", () => {
     );
     if (response.status === 200) {
       alert("Un mail vous a été envoyé");
+      $.querySelector("button").removeAttribute("disabled");
     } else {
       alert("Une erreur est survenue");
+      $.querySelector("button").removeAttribute("disabled");
     }
   });
 });

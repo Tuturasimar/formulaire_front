@@ -58,4 +58,5 @@ textarea {
 input[type="submit"] {
   background-color: rgb(101, 52, 192);
   color: white;
+  cursor: pointer;
 }
